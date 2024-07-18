@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aray demo</h1>
+    <script type="text/javascript">
+        var ts2405 = []; // 1 aray
+        
+        var arr2=[1,3,5,7,9,11];
+
+
+        arr2[2] = 199; // [1,2,199,7,9,11]
+ 
+        // alert(arr2.length); /// vị trí: 0, 1, 2, 3....(length-1)
+
+        //duyệt mảng
+        var s = 0;
+
+// có thể kiểm soát dc số lượng thực hiện theo dkien
+//            for(var i=0;i<arr2.length;i++){
+//               console.log(arr2[i]);
+//                  s = s + arr2[i];
+//             }
+
+
+        for(var x of arr2){
+            s = s + x;
+        }
+        alert(`TBC: ${s/arr2.length}`);
+
+        for(var i=0; i< arr2.length;i++){
+            arr2[i] = i * i+2;
+        }
+        
+
+
+        // cho mảng
+
+        var numbers = [10,4,-7,9,100,3,-21,0,33];
+        // tìm số lớn nhấ nhỏ nhất trong mảng 
+
+        var maxnumber = numbers[0];
+        var minnumber = numbers[0];
+
+        for (var i = 1; i < numbers.length; i++) {
+
+            if (numbers[i] > maxnumber) {
+                    maxnumber = numbers[i];
+            }
+            if (numbers[i] < minnumber) {
+                    minnumber = numbers[i];
+                }
+            }
+        console.log("Số lớn nhất trong mảng là:", maxnumber);
+        console.log("Số nhỏ nhất trong mảng là:", minnumber);
+
+        // Hàm thêm giá trị vào mảng và tìm số lớn nhất, số nhỏ nhất
+
+
+
+    // Nhập giá trị từ người dùng
+    var input = prompt("Nhập các giá trị, cách nhau bởi dấu phẩy:");
+    
+    // Tách các giá trị nhập vào thành một mảng và chuyển đổi thành số
+    var numbers = input.split(',').map(Number);
+    
+    // Kiểm tra các giá trị có hợp lệ không
+    if (numbers.some(isNaN)) {
+        console.log("Vui lòng nhập các số hợp lệ, cách nhau bởi dấu phẩy.");
+        return;
+    }
+
+    // Khởi tạo giá trị max và min
+    var maxNumber = numbers[0];
+    var minNumber = numbers[0];
+
+    // Tìm số lớn nhất và số nhỏ nhất
+    for (var i = 1; i < numbers.length; i++) {
+        if (numbers[i] > maxNumber) {
+            maxNumber = numbers[i];
+        }
+        if (numbers[i] < minNumber) {
+            minNumber = numbers[i];
+        }
+    }
+
+    // Hiển thị kết quả
+    console.log("Số lớn nhất trong mảng là:", maxNumber);
+    console.log("Số nhỏ nhất trong mảng là:", minNumber);
+
+
+
+
+            // Tạo mảng ngẫu nhiên gồm 23 số từ 00-99
+        var numbers = [];
+        for (var i = 0; i < 23; i++) {
+            var randomNumber = (Math.random() * 100) | 0; // Sử dụng toán tử bitwise OR để làm tròn xuống
+            numbers.push(randomNumber);
+        }
+
+        // Yêu cầu người dùng nhập một số từ 00-99
+        var userNumber = parseInt(prompt("Nhập một số từ 00-99:"));
+
+        // Yêu cầu người dùng nhập số tiền
+        var userMoney = parseInt(prompt("Nhập số tiền:"));
+
+        // Kiểm tra và thông báo số tiền thắng
+        var found = false;
+            for (var j = 0; j < numbers.length; j++) {
+                if (numbers[j] === userNumber) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (found) {
+                var winnings = (userMoney / 23000) * 80000;
+                console.log("Chúc mừng! Bạn đã trúng số.");
+                console.log("Số tiền thắng của bạn là:", winnings);
+            } else {
+                console.log("Rất tiếc, bạn không trúng số.");
+            }
+
+        // Hiển thị mảng ngẫu nhiên
+        console.log("Mảng ngẫu nhiên:", numbers);
+
+        var rds  = [];
+        while(rds.length < 23){
+            var r = parseInt(Math.random() * 100);
+            rds.push(r);
+        }
+        var num = prompt("Nhập con số lựa chọn");
+        num = parseInt(num);
+        var money = prompt("Số tiền muốn đặt cược: ");
+        money = parseInt(money);
+        var count = 0;
+        for(var n of rds){
+            if(n == num){
+                count++;
+            }
+        }
+        alert(`Số tiền nhận về sau 18h30: ${money * 80/ 23 * count}`);
+
+    </script>
+</body>
+</html>

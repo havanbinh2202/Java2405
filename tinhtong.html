@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính tổng</h1>
+    <script type="text/javascript">
+        // nhập số nguyên n
+        // tìm s = 1 + 2 + 3 + .... + n(theo cách su dung loop)
+
+        var x = prompt("Bạn muốn tính tổng từ 1 đến bao nhiêu?");
+        x = parseInt(n);
+        var a = 1;
+        var S = 0;
+        while (a <= x) {
+            S = S + a;
+            a++;
+        }
+        alert(`Tổng từ 1 đến n là: ${S}`);
+
+            // Hàm để tìm số Fibonacci gần nhất nhỏ hơn hoặc bằng n
+    
+            // Nhập số nguyên n
+            var n = prompt("Nhập vào số n:");
+            n = parseInt(n); // Chuyển đổi giá trị nhập vào thành số nguyên
+            
+            var f1 = 0;
+            var f2 = 1;
+            var f3 = 1;
+            for(var i =3 ; i<=n;i++){
+                f1  = f2 ;
+                f2 = f3;
+                f3 = f1 + f2;
+            }
+            alert(`Cận dưới của ${n} thuộc dãy Fibonacci là ${f3}`);
+        </script>
+
+
+</body>
+</html>

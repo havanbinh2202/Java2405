@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Funciton Demo 2</h1>
+        <script type="text/javascript" src="js/demo.js">  </script>
+        <script type="text/javascript">
+            // Làm thế nào để tạo ra  1 function
+            // 1. xác định function đó dùng làm gì ? (chức năng của nó)
+            // 2.Input (Đầu vào có những gì ?) -> để làm chức năng này cần cung cấp thông tin gì?
+            // 3.output: khi làm xong báo kết quả như thế nào?
+            // 4.Logic: để được từ input -> output thì cần làm các lệnh theo thứ tự như thế nào
+
+            // Ví dụ:
+            // 1. Hàm dùng để kiểm tra 1 số có phải số nguyên tố hay không ?
+            // 2.Input: phải cho hàm cái số mà mình muốn kiểm tra
+            // 3. output: báo ra màn hình xem nó có phải snt hay k
+            // 4. cho vòng lặp kiểm tra từ 2 đến căn 2 của số đó , hễ mà chia hết cho 1 số
+            // bất kì thì không phải còn nếu mà không chia thêm dc sô nào nữa thì là snt
+    
+
+
+            // hàm tính chu vi diện tích hình tam giác khi biết 3 cạnh
+
+    
+            // Nhập độ dài ba cạnh của tam giác từ người dùng
+            var a = parseFloat(prompt("Nhập độ dài cạnh a:"));
+            var b = parseFloat(prompt("Nhập độ dài cạnh b:"));
+            var c = parseFloat(prompt("Nhập độ dài cạnh c:"));
+    
+            // Gọi hàm để tính chu vi và diện tích
+            tinhChuViVaDienTich(a, b, c);
+
+            // Nhập các số từ người dùng
+                var array = [];
+                var input;
+                do {
+                    input = prompt("Nhập một số (bấm Cancel hoặc để trống để dừng nhập):");
+                    if (input !== null && input.trim() !== "") {
+                        array.push(parseFloat(input));
+                    }
+                } while (input !== null && input.trim() !== "");
+
+                // Gọi các hàm và hiển thị kết quả
+                if (array.length > 0) {
+                    var max = timSoLonNhat(array);
+                    var average = tinhTBC(array);
+                    var minPositive = timSoDuongNhoNhat(array);
+                    var averagePositive = tinhTBCSoDuong(array);
+
+                    alert(`Số lớn nhất trong mảng: ${max}`);
+                    alert(`Trung bình cộng của mảng: ${average}`);
+                    alert(`Số dương nhỏ nhất trong mảng: ${minPositive}`);
+                    alert(`Trung bình cộng của các số dương trong mảng: ${averagePositive}`);
+                } else {
+                    alert("Bạn không nhập số nào.");
+                }
+        </script>
+</body>
+</html>
