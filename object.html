@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Demo Object</h1>
+    <h2 id="countdown">10</h2>
+    <h2><span>10</span>:<span>00</span></h2>
+    <script type="text/javascript">
+        
+        <!-- var x = 10;
+        var s = 'hello';
+        var arr = [];
+        var b = {
+            name: "Nguyễn Anh Thắng",
+            age: 18,
+            address: 'Ha Noi'
+        }
+        alert(b.address);
+        b.address = "Đà Nẵng";
+        alert(b.address);
+        b['address'] = "Hải Phòng"
+        alert(b['address']); 
+    -->
+
+
+        // 1. chuyển 1 phần tử bên html -> 1 object bên js
+        var h = document.getElementById("heading"); // h là 1 object: Document object model
+
+        // 2. thay đổi gì bên hiển thị thì tác động vào object của js
+        // h.innerText = " xin chào các bạn";
+        h.innerHTML = "<i>XIN CHAO</i>";
+
+        // change style
+        h.style.color = "red";
+        h.style.transform = "scale(1.3)";
+        h.style.backgroundColor = "orange";
+    
+        
+        var x = 10;
+        var ncd = setInterval(delayAlert,1000); // sẽ thực thi hàm delayAleart cứ sau mỗi 2000ms -> lặp vĩnh viễn
+        function delayAlert(){
+            // alert("hello world!");
+            // console.log(x);
+            var cd = document.getElementById('countdown');
+            cd.innerText = x;
+                x--;
+                if(x < 0){
+                    clearInterval(ncd);
+                }
+
+        }
+
+        var min = 9;
+        var sec = 60;
+   
+        function minutes() {
+          min--;
+          if (min < 0) {
+            alert("You are out of time for this task");
+          }
+        }
+   
+        var cdsec = setInterval(seconds, 1000);
+   
+        function seconds() {
+          sec--;
+          if (sec < 0 && min >= 0) {
+            sec = 59;
+            minutes(); // gọi minutes() để giảm gia trị min
+          } else if (sec === 0 && min < 0) {
+            clearInterval(cdsec); // dừng đếm ngược khi hết time
+          }
+   
+          updateTime(); // Cập nhật hiển thị tgian sau mỗi giây
+        }
+   
+        function updateTime() {
+          var time =  document.getElementById("10min")
+          time.innerText = `Bạn còn ${min} : ${sec}`; // hiển thị tgian còn lại
+        }
+
+        
+
+    </script>
+</body>
+</html>
