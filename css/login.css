@@ -1,0 +1,9 @@
+    /* CSS để điều chỉnh giao diện */
+    .login-form {
+        display: none; /* Ẩn form login ban đầu */
+        max-width: 300px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+    }
