@@ -1,0 +1,17 @@
+body{
+    background-image: url(../img/forecast.jpg);
+    background-size: cover;
+}
+.item{
+    background-color: #00000070;
+    border-radius: 6px;
+    padding: 20px;
+    height: 170px;
+}
+
+.item p{
+    color: #fff;
+}
+.item h3{
+
+}
