@@ -1,7 +1,7 @@
 const fruits = {
-    "Hoa quả": ["../img/product-2.jpg", "../img/quả đào.jpg", "../img/quả nho.jpg"],
-    "Thực Phẩm": ["../img/product-7.jpg", "../img/blog-2.jpg", "../img/blog-3.jpg"],
-    "Strawberries": ["../img/camep.jpg", "../img/cafe1.jpg", "../img/nuocchanh.jpg"]
+    "Hoa quả": ["././img/product-2.jpg", "././img/quả đào.jpg", "././img/quả nho.jpg"],
+    "Thực Phẩm": ["././img/product-7.jpg", "././img/blog-2.jpg", "././img/blog-3.jpg"],
+    "Strawberries": ["././img/camep.jpg", "././img/cafe1.jpg", "././img/nuocchanh.jpg"]
 };
 
 // Lưu dữ liệu vào Local Storage
